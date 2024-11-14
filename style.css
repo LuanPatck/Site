@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1b1b1b; /* Fundo escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #ff6b6b; /* Texto vermelho clarinho */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#cube {
+  position: relative;
+}
+
+#message {
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  text-align: justify; /* Justifica o texto */
+}
+
+#name {
+  font-size: 2.5rem; /* Maior que o texto da mensagem */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5em; /* Espaçamento entre o nome e a mensagem */
+}
+
+.hidden {
+  display: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  animation: float 5s ease-in-out infinite;
+  color: #ff6b6b;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+
